@@ -10,9 +10,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        lightBlue: "hsl(215.02, 98.39%, 51.18%)",
-        darkBlue: "hsl(213.86, 58.82%, 46.67%)",
-        lightGreen: "hsl(156.62, 73.33%, 58.82%)",
+        lightPink: "hsl(330, 100%, 75%)", // A light pastel pink
+        mediumPink: "hsl(330, 100%, 60%)", // A medium pink shade
+        darkPink: "hsl(330, 100%, 50%)",   // A vibrant pink
+        deepPink: "hsl(330, 100%, 40%)",   // A deeper pink
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],

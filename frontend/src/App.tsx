@@ -7,6 +7,7 @@ import { CompanySearch } from './company';
 import { searchCompanies } from './api';
 import ListPortFolio from './Components/Portfolio/ListPortfolio/ListPortFolio';
 import Navbar from './Components/Navbar/Navbar';
+import Hero from './Components/Hero/Hero';
 
 function App() {
   const [search, setSearch] = useState<string>("");
@@ -19,6 +20,7 @@ function App() {
   }
 
   const onClick = async (e: SyntheticEvent) => {
+    e.preventDefault();
       const result = await searchCompanies(search);
       if(typeof result === "string") {
         setServerError(result);
@@ -47,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       <Search onClick={onClick} search={search} handleChange={handleChange}/>
       <ListPortFolio portfolioValues={portFolioValues} onPortfolioDelete={onPortfolioDelete}/>
       { serverError && <h1>{serverError}</h1>}

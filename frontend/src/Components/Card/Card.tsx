@@ -14,13 +14,18 @@ const Card: React.FC<Props> = ({
    onPortFolioCreate
    }: Props) : JSX.Element => {
   return (
-    <div className='card'>
-      <img alt='company-logo'/>
-        <div className='details'>
-            <h2>{name} ({symbol})</h2>
-            <p>{currency}</p>
-        </div>
-        <p className="info">{exchangeShortName} - {stockExchange}</p>
+    <div
+    className="flex flex-col items-center justify-between w-full p-6 bg-slate-100 rounded-lg md:flex-row"
+    key={id}
+    id={id}
+  >
+    <h2 className="font-bold text-center text-deepPink md:text-left">
+      {name} ({symbol})
+    </h2>
+    <p className="text-black">{currency}</p>
+    <p className="font-bold text-black">
+      {exchangeShortName} - {stockExchange}
+    </p>
         <AddPorfolio onPortFolioCreate={onPortFolioCreate} symbol={symbol}/>
     </div>
   )
