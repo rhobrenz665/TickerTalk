@@ -10,7 +10,7 @@ const AddPorfolio = ({onPortFolioCreate, symbol } : Props) => {
   return (
     <div>
       <form onSubmit={onPortFolioCreate}>
-        <input readOnly={true} hidden={true} value={symbol} name="hiddenSymbol"/>
+        <input readOnly={true}  style={{ display: 'none' }}  value={symbol} name="hiddenSymbol"/>
         <button type='submit'>Add</button>
       </form>
     </div>
